@@ -5,33 +5,47 @@ import logging
 logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
 
 
-project_name = "python_project_template"
+project_name = "py_project_template"
 
 list_of_files = [
     "artifacts/data/.gitkeep",
-    "artifacts/dataset/.gitkeep",
+    "artifacts/data_sources/.gitkeep",
     "artifacts/models/.gitkeep",
-    "artifacts/results/.gitkeep",
-    
+    "artifacts/results/.gitkeep",    
     "db/.gitkeep",
     
     "notebooks/trials.ipynb",
-    "templates/index.html",
     
-    f"src/{project_name}/__init__.py",
-    f"src/{project_name}/utils/__init__.py",
-    f"src/{project_name}/constants/__init__.py",
-    f"src/{project_name}/components/__init__.py",
-    f"src/{project_name}/pipeline/__init__.py",
+    "utils/__init__.py",
+    "utils/common.py",
+    "utils/config.py",
+    "utils/logger.py",
+    "utils/ingestion.py",
+    "utils/preprocessing.py",
+    "utils/training.py",
+    "utils/evaluation.py",
     
-    "setup.py",
+    "data_ingestion_pipeline/__init__.py",
+    "data_ingestion_pipeline/stage_01_create_sources.py",
+    
+    "data_preprocessing_pipeline/__init__.py",
+    "data_preprocessing_pipeline/stage_01_populate_db.py",
+    
+    "training_pipeline/__init__.py",
+    "training_pipeline/stage_01_create_base_model.py",
+    
+    "evaluation_pipeline/__init__.py",
+    "evaluation_pipeline/stage_01_evaluate_model.py",
+    
     "main.py",
     "app.py",
+    "test.py",
+    "evaluate.py",
     
-    "config.yaml",    
     "params.yaml",
     "dvc.yaml",
     ".env.local",
+    ".env.example",
     "requirements.txt",
 ]
 
